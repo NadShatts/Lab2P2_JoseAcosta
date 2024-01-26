@@ -21,7 +21,7 @@ public class ConferenciasVirtuales {
         this.enlaceAcceso = EnlaceScceso;
     }
     
-    public String getTitul3o(){
+    public String getTitulo3(){
         return titulo3;
     }
     

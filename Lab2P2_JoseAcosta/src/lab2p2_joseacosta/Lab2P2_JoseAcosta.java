@@ -160,14 +160,62 @@ public class Lab2P2_JoseAcosta {
                     break;
 
                 case 3:
-                     if (usuarioActual.tipoUsuario.equals("bibliotecario") || usuarioActual.tipoUsuario.equals("profesor")) {
-                         System.out.println("Ingrese el recurso que quiera eliminar: ");
+                          if (usuarioActual.tipoUsuario.equals("bibliotecario") || usuarioActual.tipoUsuario.equals("profesor")) {
         System.out.println("Ingrese el título del recurso a eliminar:");
         String tituloEliminar = entrada.next();
-        
 
-                     }
+        boolean recursoEncontrado = false;
+        for (Object obj : recursos) {
+            if (obj instanceof Libros) {
+                Libros libro = (Libros) obj;
+                if (libro.getTitulo().equals(tituloEliminar)) {
+                    System.out.println("Eliminando libro:\n" + libro);
+                    recursos.remove(obj);
+                    recursoEncontrado = true;
+                    System.out.println("Libro eliminado correctamente.");
+                    break;
+                }
+            } else if (obj instanceof Articulos) {
+                Articulos articulo = (Articulos) obj;
+                if (articulo.getTitulo1().equals(tituloEliminar)) {
+                    System.out.println("Eliminando artículo:\n" + articulo);
+                    recursos.remove(obj);
+                    recursoEncontrado = true;
+                    System.out.println("Artículo eliminado correctamente.");
+                    break;
+                }
+            } else if (obj instanceof CursosEnLinea) {
+                CursosEnLinea curso = (CursosEnLinea) obj;
+                if (curso.getTitulo2().equals(tituloEliminar)) {
+                    System.out.println("Eliminando curso en línea:\n" + curso);
+                    recursos.remove(obj);
+                    recursoEncontrado = true;
+                    System.out.println("Curso en línea eliminado correctamente.");
+                    break;
+                }
+            } else if (obj instanceof ConferenciasVirtuales) {
+                ConferenciasVirtuales conferencia = (ConferenciasVirtuales) obj;
+                if (conferencia.getTitulo3().equals(tituloEliminar)) {
+                    System.out.println("Eliminando conferencia virtual:\n" + conferencia);
+                    recursos.remove(obj);
+                    recursoEncontrado = true;
+                    System.out.println("Conferencia virtual eliminada correctamente.");
+                    break;
+                }
+            }
+        }
+
+        if (!recursoEncontrado) {
+            System.out.println("No se encontró un recurso con el título proporcionado.");
+        }
+    } else {
+        System.out.println("No tiene permisos para hacer eso.");
+    }
+    break;
+
+                     
                 case 4:
+                   
 
                     break;
 
