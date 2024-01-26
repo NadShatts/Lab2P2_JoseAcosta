@@ -10,14 +10,14 @@ package lab2p2_joseacosta;
  */
 public class Articulos {
     
-    private String titulo;
+    private String titulo1;
     private String autor;
     private String tema;
     private String fechaPublicacion;
     private boolean accesoLinea;
 
     public Articulos(String titulo, String autor, String tema, String fechaPublicacion, boolean accesoLinea) {
-        this.titulo = titulo;
+        this.titulo1 = titulo;
         this.autor = autor;
         this.tema = tema;
         this.fechaPublicacion = fechaPublicacion;
@@ -25,12 +25,12 @@ public class Articulos {
     }
     
     
-    public String getTitulo() {
-        return titulo;
+    public String getTitulo1() {
+        return titulo1;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
+    public void setTitulo1(String titulo) {
+        this.titulo1 = titulo;
     }
 
     public String getAutor() {
@@ -67,7 +67,7 @@ public class Articulos {
 
     public String toString() {
         return "Articulo{" +
-                "titulo='" + titulo + '\'' +
+                "titulo='" + titulo1 + '\'' +
                 ", autor='" + autor + '\'' +
                 ", tema='" + tema + '\'' +
                 ", fechaPublicacion='" + fechaPublicacion + '\'' +

@@ -8,7 +8,7 @@ package lab2p2_joseacosta;
  *
  * @author josed
  */
-public class Usuario {
+public class Usuario  {
     
     private String nombreUsuario;
     private String contraseña;

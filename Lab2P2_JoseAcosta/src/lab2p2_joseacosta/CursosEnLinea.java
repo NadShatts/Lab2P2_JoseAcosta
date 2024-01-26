@@ -11,13 +11,13 @@ package lab2p2_joseacosta;
 public class CursosEnLinea {
     
     private String instructor;
-    private String titulo;
+    private String titulo2;
     private int duracionSemanas;
     private int plataforma;
 
-    public CursosEnLinea(String instructor, String titulo, int duracionSemanas, int plataforma) {
+    public CursosEnLinea(String instructor, String titulo2, int duracionSemanas, int plataforma) {
         this.instructor = instructor;
-        this.titulo = titulo;
+        this.titulo2 = titulo2;
         this.duracionSemanas = duracionSemanas;
         this.plataforma = plataforma;
     }
@@ -30,12 +30,12 @@ public class CursosEnLinea {
         this.instructor = instructor;
     }
     
-    public String getTitulo(){
-        return titulo;
+    public String getTitulo2(){
+        return titulo2;
     }
     
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
+    public void setTitulo2(String titulo) {
+        this.titulo2 = titulo;
     }
     
     public int getDuracionSemanas(){
