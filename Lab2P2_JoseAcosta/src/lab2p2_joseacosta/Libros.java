@@ -63,14 +63,10 @@ public class Libros {
         this.disponibilidad = disponible;
     }
 
-    public String toString() {
-        return "'\\'Libro{" +
-                "Titulo: '" + titulo + '\'' +
-                ", Autor: '" + autor + '\'' +
-                ", Genero: '" + genero + '\'' +
-                ", Año: " + añoPublicacion +
-                ", Disponible: " + disponibilidad +
-                '}';
-    }
+    
+     public String toString(){
+         return "Libro.  |  Titulo: " +titulo+ " |  Autor: " +autor+ " |  Genero: "+genero+ " |  Año: "+añoPublicacion+ " |  Disponible: " +disponibilidad;
+     }
+    
 }
 

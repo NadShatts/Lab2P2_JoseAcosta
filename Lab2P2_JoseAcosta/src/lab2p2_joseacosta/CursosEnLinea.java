@@ -56,12 +56,7 @@ public class CursosEnLinea {
     }
     
      public String toString() {
-        return "Articulo{" +
-                "titulo='" + titulo2 + '\'' +
-                ", Instructor '" + instructor + '\'' +
-                ", Duracion en Semanas '" + duracionSemanas + '\'' +
-                ", Plataforma " +plataforma +
-                '}';
+         return "Curso en Linea.  |  Instructor " +instructor+ " |  Titulo: " +titulo2+ " |  Duracion "+duracionSemanas+ " |  Plataforma:  "+plataforma;
     
 }
 }

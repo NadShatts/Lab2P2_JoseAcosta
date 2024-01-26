@@ -215,7 +215,75 @@ public class Lab2P2_JoseAcosta {
 
                      
                 case 4:
-                   
+                    if (usuarioActual.tipoUsuario.equals("bibliotecario")) {
+                   System.out.println("Ingrese el título del recurso a modificar:");    
+                    }else{
+                        System.out.println("No tiene permiso para hacer este");
+                    }
+        String tituloModificar = entrada.next();
+                    
+
+        boolean recursoEncontrado = false;
+        for (Object obj : recursos) {
+            if (obj instanceof Libros) {
+                Libros libro = (Libros) obj;
+                if (libro.getTitulo().equals(tituloModificar)) {
+                    System.out.println("El título actual del libro es: " + libro.getTitulo());
+                    System.out.println("Ingrese el nuevo título del libro:");
+                    String nuevoTitulo = entrada.next();
+                    libro.setTitulo(nuevoTitulo);
+                    System.out.println("Ingrese el nuevo autor: ");
+                    String nuevoAutorLibro = entrada.next();
+                            libro.setAutor(nuevoAutorLibro);
+                            System.out.println("Ingrese el nuevo genero: ");
+                            String nuevoGenero = entrada.next();
+                           libro.setGenero(nuevoGenero);
+                    System.out.println("El libro ha sido modificado correctamente.");
+                    recursoEncontrado = true;
+                    break;
+                }
+            } else if (obj instanceof Articulos) {
+                Articulos articulo = (Articulos) obj;
+                if (articulo.getTitulo1().equals(tituloModificar)) {
+                    System.out.println("El título actual del artículo es: " + articulo.getTitulo1());
+                    System.out.println("Ingrese el nuevo título del artículo:");
+                    String nuevoTitulo = entrada.next();
+                    articulo.setTitulo1(nuevoTitulo);
+                    System.out.println("El artículo ha sido modificado correctamente.");
+                    recursoEncontrado = true;
+                    break;
+                }
+            } else if (obj instanceof CursosEnLinea) {
+                CursosEnLinea curso = (CursosEnLinea) obj;
+                if (curso.getTitulo2().equals(tituloModificar)) {
+                    System.out.println("El título actual del curso en línea es: " + curso.getTitulo2());
+                    System.out.println("Ingrese el nuevo título del curso en línea:");
+                    String nuevoTitulo = entrada.next();
+                    curso.setTitulo2(nuevoTitulo);
+                    System.out.println("El curso en línea ha sido modificado correctamente.");
+                    recursoEncontrado = true;
+                    break;
+                }
+            } else if (obj instanceof ConferenciasVirtuales) {
+                ConferenciasVirtuales conferencia = (ConferenciasVirtuales) obj;
+                if (conferencia.getTitulo3().equals(tituloModificar)) {
+                    System.out.println("El título actual de la conferencia virtual es: " + conferencia.getTitulo3());
+                    System.out.println("Ingrese el nuevo título de la conferencia virtual:");
+                    String nuevoTitulo = entrada.next();
+                    conferencia.setTitulo3(nuevoTitulo);
+                    System.out.println("La conferencia virtual ha sido modificada correctamente.");
+                    recursoEncontrado = true;
+                    break;
+                
+                }
+            }
+        }
+
+        if (!recursoEncontrado) {
+            System.out.println("No se encontró un recurso con el título proporcionado.");
+        }
+    
+
 
                     break;
 
