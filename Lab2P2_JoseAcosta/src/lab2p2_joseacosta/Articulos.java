@@ -67,10 +67,10 @@ public class Articulos {
     public String toString() {
         return "Articulo{" +
                 "titulo='" + titulo1 + '\'' +
-                ", autor='" + autor + '\'' +
-                ", tema='" + tema + '\'' +
-                ", fechaPublicacion='" + fechaPublicacion + '\'' +
-                ", accesoEnLinea=" + accesoLinea +
+                ", Autor: '" + autor + '\'' +
+                ", Tema: '" + tema + '\'' +
+                ", Fecha: '" + fechaPublicacion + '\'' +
+                ", Acceso en Linea: " + accesoLinea +
                 '}';
     
 }

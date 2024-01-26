@@ -8,7 +8,7 @@ package lab2p2_joseacosta;
  *
  * @author josed
  */
-public class Libros extends Recurso{
+public class Libros {
     private String titulo;
     private String autor;
     private String genero;
@@ -64,12 +64,12 @@ public class Libros extends Recurso{
     }
 
     public String toString() {
-        return "Libro{" +
-                "titulo='" + titulo + '\'' +
-                ", autor='" + autor + '\'' +
-                ", genero='" + genero + '\'' +
-                ", anioPublicacion=" + añoPublicacion +
-                ", disponible=" + disponibilidad +
+        return "'\\'Libro{" +
+                "Titulo: '" + titulo + '\'' +
+                ", Autor: '" + autor + '\'' +
+                ", Genero: '" + genero + '\'' +
+                ", Año: " + añoPublicacion +
+                ", Disponible: " + disponibilidad +
                 '}';
     }
 }

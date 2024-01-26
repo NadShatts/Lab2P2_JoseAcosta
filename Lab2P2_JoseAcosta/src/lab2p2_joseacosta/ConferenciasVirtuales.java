@@ -57,4 +57,13 @@ public class ConferenciasVirtuales {
         this.enlaceAcceso = enlaceAcceso;
     }
     
+     public String toString() {
+        return "Articulo{" +
+                "titulo='" + titulo3 + '\'' +
+                ", Conferencista: '" + conferencista + '\'' +
+                ", Fecha: '" + fecha + '\'' +
+                ", Enlace de Acceso " +enlaceAcceso +
+                '}';
+    
+}
 }

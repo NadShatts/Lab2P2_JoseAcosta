@@ -55,4 +55,13 @@ public class CursosEnLinea {
         this.plataforma = plataforma;
     }
     
+     public String toString() {
+        return "Articulo{" +
+                "titulo='" + titulo2 + '\'' +
+                ", Instructor '" + instructor + '\'' +
+                ", Duracion en Semanas '" + duracionSemanas + '\'' +
+                ", Plataforma " +plataforma +
+                '}';
+    
+}
 }

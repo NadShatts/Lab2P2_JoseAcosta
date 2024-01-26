@@ -19,7 +19,7 @@ public class Lab2P2_JoseAcosta {
     
     public static void main(String[] args) {
 
-        ArrayList<Recurso> recursos = new ArrayList<>();
+        ArrayList recursos = new ArrayList<>();
         
     ArrayList<Usuario> usuarios = new ArrayList<>();
         Scanner entrada = new Scanner(System.in);
@@ -62,9 +62,17 @@ public class Lab2P2_JoseAcosta {
 
             switch (opcion) {
                 case 1:
-                    if (usuarioActual.tipoUsuario.equals("estudiante") || usuarioActual.tipoUsuario.equals("profesor")) {
-    System.out.println("Lista de recursos en la biblioteca virtual:");
-    for (Recurso recurso : recursos) {
+
+                    if (usuarioActual.tipoUsuario.equals("estudiante") || usuarioActual.tipoUsuario.equals("profesor") || usuarioActual.tipoUsuario.equals("bibliotecario")) {
+                    
+                        if(recursos.isEmpty()){
+                        System.out.println("No hay nada ingresado hasta el momento una disculpa");
+                    }else{
+    for (Object recurso : recursos) {
+         System.out.println("Lista de recursos en la biblioteca virtual:");
+         System.out.println(recurso.toString());
+    
+    }
         
     }
 } else {
@@ -100,7 +108,8 @@ public class Lab2P2_JoseAcosta {
                     
                             
                               Libros nuevoLibro = new Libros(tituloLibro, autorLibro, generoLibro, añoLibro);
-
+recursos.add(nuevoLibro);
+                            System.out.println("Libro ingresado correctamente.");
                     
         
                             break;
@@ -115,7 +124,8 @@ public class Lab2P2_JoseAcosta {
                             String fechaArticulo = entrada1.next();
                             
                             Articulos nuevoArticulo = new Articulos(tituloArticulo, autorArticulo,  temaArticulo, fechaArticulo);
-                            
+                            recursos.add(nuevoArticulo);
+                            System.out.println("Articulo ingresado correctamente.");
                             break;
                         case 3:
                             System.out.print("Ingrese el título del curso en línea: ");
@@ -127,7 +137,10 @@ public class Lab2P2_JoseAcosta {
                             System.out.println("Ingrese la plataforma: ");
                             int plataformaCurso = entrada1.nextInt();
                             
+                            
                             CursosEnLinea curso = new CursosEnLinea(tituloCurso, instructorCurso, duracionCurso, plataformaCurso);
+                            recursos.add(curso);
+                            System.out.println("Curso ingresado correctamente.");
                             break;
                         case 4:
 
@@ -139,6 +152,10 @@ public class Lab2P2_JoseAcosta {
                             String fechaConferencia = entrada1.next();
                             System.out.println("Ingrese el enlace de acceso: ");
                             String enlaceAcceso = entrada1.next();
+                            
+                            ConferenciasVirtuales conferencia = new ConferenciasVirtuales(tituloConferencia, conferencistaConferencia, fechaConferencia, enlaceAcceso);
+recursos.add(conferencia);
+                            System.out.println("Conferencia ingresada correctamente");
 
                             break;
                         default:
@@ -148,7 +165,12 @@ public class Lab2P2_JoseAcosta {
                     break;
                     
                 case 3:
+                     if (usuarioActual.tipoUsuario.equals("bibliotecario")) {
+                     }else{
+                         System.out.println("No tienes permiso apra hacer eso.");
+                     }
                     break;
+                     
                 case 4:
                     break;
 
