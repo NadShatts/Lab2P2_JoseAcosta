@@ -16,12 +16,11 @@ public class Articulos {
     private String fechaPublicacion;
     private boolean accesoLinea;
 
-    public Articulos(String titulo, String autor, String tema, String fechaPublicacion, boolean accesoLinea) {
+    public Articulos(String titulo, String autor, String tema, String fechaPublicacion) {
         this.titulo1 = titulo;
         this.autor = autor;
         this.tema = tema;
         this.fechaPublicacion = fechaPublicacion;
-        this.accesoLinea = accesoLinea;
     }
     
     

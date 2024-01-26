@@ -15,12 +15,11 @@ public class Libros {
     private int añoPublicacion;
     private boolean disponibilidad;
 
-    public Libros(String titulo, String autor, String genero, int añoPublicacion, boolean disponibilidad) {
+    public Libros(String titulo, String autor, String genero, int añoPublicacion) {
         this.titulo = titulo;
         this.autor = autor;
         this.genero = genero;
         this.añoPublicacion = añoPublicacion;
-        this.disponibilidad = disponibilidad;
     }
 
 

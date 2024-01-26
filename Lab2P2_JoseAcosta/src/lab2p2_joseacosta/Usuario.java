@@ -10,8 +10,8 @@ package lab2p2_joseacosta;
  */
 public class Usuario  {
     
-    private String nombreUsuario;
-    private String contraseña;
+    String nombreUsuario;
+    String contraseña;
     private String tipoUsuario;
 
     public Usuario(String nombreUsuario, String contraseña, String tipoUsuario) {
