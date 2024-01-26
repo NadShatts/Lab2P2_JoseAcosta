@@ -12,7 +12,7 @@ public class Usuario  {
     
     String nombreUsuario;
     String contraseña;
-    private String tipoUsuario;
+    String tipoUsuario;
 
     public Usuario(String nombreUsuario, String contraseña, String tipoUsuario) {
         this.nombreUsuario = nombreUsuario;

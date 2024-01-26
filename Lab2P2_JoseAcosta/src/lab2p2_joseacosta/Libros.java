@@ -8,7 +8,7 @@ package lab2p2_joseacosta;
  *
  * @author josed
  */
-public class Libros {
+public class Libros extends Recurso{
     private String titulo;
     private String autor;
     private String genero;

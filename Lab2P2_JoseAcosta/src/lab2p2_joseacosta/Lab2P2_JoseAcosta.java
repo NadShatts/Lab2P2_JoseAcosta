@@ -20,14 +20,15 @@ public class Lab2P2_JoseAcosta {
     public static void main(String[] args) {
 
         ArrayList<Recurso> recursos = new ArrayList<>();
+        
     ArrayList<Usuario> usuarios = new ArrayList<>();
         Scanner entrada = new Scanner(System.in);
         int opcion;
 
         
-        usuarios.add(new Usuario("estudiante1", "123", "estudiante"));
-        usuarios.add(new Usuario("profesor1", "456", "profesor"));
-        usuarios.add(new Usuario("bibliotecario1", "789", "bibliotecario"));
+        usuarios.add(new Usuario("estudiante", "123", "estudiante"));
+        usuarios.add(new Usuario("profesor", "456", "profesor"));
+        usuarios.add(new Usuario("bibliotecario", "789", "bibliotecario"));
 
 
         Scanner s = new Scanner(System.in);
@@ -40,6 +41,7 @@ public class Lab2P2_JoseAcosta {
         for (Usuario usuario : usuarios) {
             if (usuario.nombreUsuario.equals(nombreUsuario) && usuario.contraseña.equals(contrasena)) {
                 usuarioActual = usuario;
+                System.out.println("Seas bienvenido :) ");
                 break;
             }
         }
@@ -50,6 +52,7 @@ public class Lab2P2_JoseAcosta {
         }
         
         do {
+            System.out.println("Bienvenido " +nombreUsuario);
             System.out.println("1. Listar Recurso.");
             System.out.println("2. Crear Recurso");
             System.out.println("3. Eliminar Recurso.");
@@ -59,9 +62,18 @@ public class Lab2P2_JoseAcosta {
 
             switch (opcion) {
                 case 1:
+                    if (usuarioActual.tipoUsuario.equals("estudiante") || usuarioActual.tipoUsuario.equals("profesor")) {
+    System.out.println("Lista de recursos en la biblioteca virtual:");
+    for (Recurso recurso : recursos) {
+        
+    }
+} else {
+    System.out.println("No tiene permisos para listar recursos. Esta opción es solo para estudiantes y profesores.");
+}
                     break;
 
                 case 2:
+                    if (usuarioActual.tipoUsuario.equals("bibliotecario") || usuarioActual.tipoUsuario.equals("profesor")) {
                     Scanner entrada1 = new Scanner(System.in);
                     System.out.println("Seleccione el tipo de recurso a crear:");
                     System.out.println("1. Libro");
@@ -69,6 +81,10 @@ public class Lab2P2_JoseAcosta {
                     System.out.println("3. Curso en Línea");
                     System.out.println("4. Conferencia Virtual");
                     System.out.print("Ingrese su elección: ");
+                    } else {
+    System.out.println("No tiene permisos para hacer eso.");
+                    }
+                    Scanner entrada1 = new Scanner(System.in);
                     int tipoRecurso = entrada1.nextInt();
                     switch (tipoRecurso) {
                         case 1:
@@ -81,10 +97,11 @@ public class Lab2P2_JoseAcosta {
                             System.out.println("Ingrese el año de publicacion del libro: ");
                             int añoLibro = entrada1.nextInt();
                             System.out.println("Disponibilidad");
+                    
                             
                               Libros nuevoLibro = new Libros(tituloLibro, autorLibro, generoLibro, añoLibro);
 
-        recursos.add(nuevoLibro);
+                    
         
                             break;
                         case 2:
@@ -103,11 +120,25 @@ public class Lab2P2_JoseAcosta {
                         case 3:
                             System.out.print("Ingrese el título del curso en línea: ");
                             String tituloCurso =entrada1.next();
+                            System.out.println("Ingrese el instructor del curso:");
+                            String instructorCurso = entrada1.next();
+                            System.out.println("Ingrese la duracion: ");
+                            int duracionCurso = entrada1.nextInt();
+                            System.out.println("Ingrese la plataforma: ");
+                            int plataformaCurso = entrada1.nextInt();
+                            
+                            CursosEnLinea curso = new CursosEnLinea(tituloCurso, instructorCurso, duracionCurso, plataformaCurso);
                             break;
                         case 4:
 
                             System.out.print("Ingrese el título de la conferencia virtual: ");
                             String tituloConferencia = entrada1.next();
+                            System.out.println("Ingrese el conferencista:");
+                            int conferencistaConferencia = entrada1.nextInt();
+                            System.out.println("Ingrese la fecha: ");
+                            String fechaConferencia = entrada1.next();
+                            System.out.println("Ingrese el enlace de acceso: ");
+                            String enlaceAcceso = entrada1.next();
 
                             break;
                         default:
@@ -115,23 +146,21 @@ public class Lab2P2_JoseAcosta {
                     }
 
                     break;
-
+                    
                 case 3:
                     break;
                 case 4:
                     break;
 
                 case 5:
-                    break;
-
-                case 6:
+                    System.out.println("Saliendo de la Biblioteca ");
                     break;
 
                 default:
                     System.out.println("Opcion invalida. Intente denuevo.");
 
             }
-        } while (opcion != 4);
+        } while (opcion != 5);
     }
 
 }
