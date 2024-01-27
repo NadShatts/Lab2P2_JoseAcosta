@@ -29,6 +29,7 @@ public class Lab2P2_JoseAcosta {
         usuarios.add(new Usuario("profesor", "456", "profesor"));
         usuarios.add(new Usuario("bibliotecario", "789", "bibliotecario"));
 
+        //Le pregunte a un estructor que si tenia que poner esta informacion dentro del ciclo while y me dijo que no, pero luego escuche que debia estar dentro o algo asi, entonces una disculpa de antemano
         Scanner s = new Scanner(System.in);
         System.out.println("user: estudiante, profesor, bibliotecario");
         System.out.println("contra: 123, 456, 789");
