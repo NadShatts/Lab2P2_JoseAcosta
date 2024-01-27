@@ -12,10 +12,10 @@ public class CursosEnLinea {
     
     private String instructor;
     private String titulo2;
-    private int duracionSemanas;
-    private int plataforma;
+    private String duracionSemanas;
+    private String plataforma;
 
-    public CursosEnLinea(String instructor, String titulo2, int duracionSemanas, int plataforma) {
+    public CursosEnLinea(String instructor, String titulo2, String duracionSemanas, String plataforma) {
         this.instructor = instructor;
         this.titulo2 = titulo2;
         this.duracionSemanas = duracionSemanas;
@@ -38,20 +38,20 @@ public class CursosEnLinea {
         this.titulo2 = titulo;
     }
     
-    public int getDuracionSemanas(){
+    public String getDuracionSemanas(){
         return duracionSemanas;
         
     }
     
-    public void setDuracionSemanas(int duracionSemanas){
+    public void setDuracionSemanas(String duracionSemanas){
         this.duracionSemanas = duracionSemanas;
     }
     
-    public int getPlataforma(){
+    public String getPlataforma(){
         return plataforma;
     }
     
-    public void setPlataforma(int plataforma){
+    public void setPlataforma(String plataforma){
         this.plataforma = plataforma;
     }
     

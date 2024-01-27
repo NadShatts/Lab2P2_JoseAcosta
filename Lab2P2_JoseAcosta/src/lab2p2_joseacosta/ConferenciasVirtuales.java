@@ -10,16 +10,20 @@ package lab2p2_joseacosta;
  */
 public class ConferenciasVirtuales {
     private String titulo3;
-    private int conferencista;
+    private String conferencista;
     private String fecha;
     private String enlaceAcceso;
+    private String duracion;
 
-    public ConferenciasVirtuales(String titulo3, int conferencista, String fecha, String EnlaceScceso) {
+    public ConferenciasVirtuales(String titulo3, String conferencista, String fecha, String enlaceAcceso, String duracion) {
         this.titulo3 = titulo3;
         this.conferencista = conferencista;
         this.fecha = fecha;
-        this.enlaceAcceso = EnlaceScceso;
+        this.enlaceAcceso = enlaceAcceso;
+        this.duracion = duracion;
     }
+
+    
     
     public String getTitulo3(){
         return titulo3;
@@ -29,12 +33,12 @@ public class ConferenciasVirtuales {
         this.titulo3 = titulo3;
     }
     
-    public int getConferencista(){
+    public String getConferencista(){
         return conferencista;
         
     }
     
-    public void setConferencista(int conferencista){
+    public void setConferencista(String conferencista){
         this.conferencista = conferencista;
     }
     
@@ -58,7 +62,7 @@ public class ConferenciasVirtuales {
     }
     
      public String toString() {
-        return "Conferencia .  |  Titulo: " +titulo3+ " |  Conferencista: " +conferencista+ " |  Fecha "+fecha+ " |  Enlace: "+enlaceAcceso;
+        return "Conferencia .  |  Titulo: " +titulo3+ " |  Conferencista: " +conferencista+ " |  Fecha "+fecha+ "  | Duracion: " +duracion+ " |  Enlace: "+enlaceAcceso;
     
 }
 }
